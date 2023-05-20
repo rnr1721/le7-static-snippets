@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 namespace Core\CodeParts;
 
-use Core\Interfaces\CodeSnippets;
+use Core\Interfaces\CodeSnippetsInterface;
 use Psr\SimpleCache\CacheInterface;
 use function \file_exists,
              \file_get_contents,
              \file_put_contents;
 
-class CodeSnippetsDefault implements CodeSnippets
+class CodeSnippetsDefault implements CodeSnippetsInterface
 {
 
     private ?CacheInterface $cache = null;
